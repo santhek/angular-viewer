@@ -1,0 +1,24 @@
+<button mat-button mat-raised-button color="primary" (click)="LoadData()">Load Data</button>
+<div *ngIf="marketData.length > 0">
+  <div>
+    <table>
+        <thead>
+            <th>tenor</th>
+            <th>last</th>
+            <th>open</th>
+            <th>high</th>
+            <th>low</th>
+            <th>publish Time</th>
+        </thead>
+        <tbody>
+            <tr *ngFor ="let item of marketData">
+                <td (click)="alertme()">{{item.tenor}}</td>
+                <td>{{item.last}}</td>
+                <td>{{item.open}}</td>
+                <td>{{item.high}}</td>
+                <td>{{item.low}}</td>
+            </tr>
+        </tbody>
+    </table>
+  </div>
+</div>
